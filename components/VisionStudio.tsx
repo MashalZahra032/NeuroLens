@@ -183,8 +183,7 @@ function AnnotatedImage({ src, detections, showMasks }: { src: string; detection
           const lh = 18, lx = bx, ly = by > lh+4 ? by-lh-4 : by+4;
           ctx.fillStyle = color;
           ctx.beginPath();
-          // @ts-expect-error roundRect is available in modern browsers
-          ctx.roundRect(lx, ly, tw+14, lh, 3); ctx.fill();
+ctx.roundRect(lx, ly, tw+14, lh, 3); ctx.fill();
           ctx.fillStyle = "#000";
           ctx.fillText(lbl, lx+7, ly+13);
         }
